@@ -74,3 +74,7 @@ lib/
 - Todo o texto de interface está em português, conforme especificado no
   briefing.
 - `prefers-reduced-motion` é respeitado globalmente.
+
+---
+
+Redeploy trigger: forçando novo deploy para aplicar correção do tooltip (06/08/2026).
