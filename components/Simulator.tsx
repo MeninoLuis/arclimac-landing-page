@@ -64,14 +64,13 @@ function Tooltip({ text }: { text: string }) {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: 6, scale: 0.96 }}
+            initial={{ opacity: 0, y: -6, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 6, scale: 0.96 }}
+            exit={{ opacity: 0, y: -6, scale: 0.96 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute bottom-full right-0 left-auto z-50 mb-4 rounded-2xl border border-white/10 p-4 text-left shadow-soft backdrop-blur-xl w-auto max-w-[calc(100vw-3rem)] break-words translate-x-0 sm:left-1/2 sm:right-auto sm:-translate-x-1/2"
-            style={{ backgroundColor: "#111A24" }}
+            className="absolute top-full right-0 mt-2 z-50 w-64 max-w-[calc(100vw-3rem)] rounded-xl bg-slate-900 p-3 text-xs text-slate-200 shadow-2xl break-words"
           >
-            <p className="font-body text-[12.5px] leading-relaxed text-frost/85">
+            <p className="font-body leading-relaxed">
               {text}
             </p>
           </motion.div>
@@ -133,7 +132,7 @@ export default function Simulator() {
           </h2>
         </div>
 
-        <div className="glass-panel overflow-hidden rounded-[28px] shadow-soft">
+        <div className="glass-panel overflow-visible rounded-[28px] shadow-soft">
           {/* Step indicator */}
           <div className="flex items-center gap-4 border-b border-white/[0.06] px-6 py-6 sm:px-10">
             {STEP_LABELS.map((label, i) => (
