@@ -68,7 +68,7 @@ function Tooltip({ text }: { text: string }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 6, scale: 0.96 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute bottom-full z-30 mb-4 rounded-2xl border border-white/10 p-4 text-left shadow-soft backdrop-blur-xl left-2 right-2 w-auto max-w-[90vw] sm:left-1/2 sm:right-auto sm:w-60 sm:-translate-x-1/2"
+            className="absolute bottom-full left-1/2 z-30 mb-4 rounded-2xl border border-white/10 p-4 text-left shadow-soft backdrop-blur-xl w-auto max-w-[90vw] -translate-x-1/2"
             style={{ backgroundColor: "#111A24" }}
           >
             <p className="font-body text-[12.5px] leading-relaxed text-frost/85">
